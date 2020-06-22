@@ -9,3 +9,9 @@
     color: black;
     animation-delay: 0ms;
 }
+
+.miBarra {
+    color: chocolate;
+    border: rgb(6, 6, 255);
+    background-color: lime;
+}
