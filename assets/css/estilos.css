@@ -1,5 +1,11 @@
 .miBoton {
-    color: brown;
-    background-color: yellow;
+    color: blue;
+    background-color: yellowgreen;
     border: yellowgreen;
+    content: blue;
+}
+
+.Titulo {
+    color: black;
+    animation-delay: 0ms;
 }
