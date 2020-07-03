@@ -14,6 +14,10 @@
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="127605888647-c8q3m3kmigce2hmc926ub4ui0i2d24vj.apps.googleusercontent.com">
+
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -50,8 +54,27 @@
         <a class="btn btn-primary btn-lg" href="index.html" role="button">Regirtrarse </a>
         <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
         <input type="checkbox" value="remember-me"> Sends emais for my emaill
-
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" onclick="signOut();">Sign out</a>
     </form>
+
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function() {
+                console.log('User signed out.');
+            });
+        }
+    </script>
+
 </body>
 
 </html>
