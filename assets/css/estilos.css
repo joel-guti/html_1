@@ -20,3 +20,13 @@
     color: orange;
     background-color: greenyellow;
 }
+
+.URLReto2 {
+    src: url("https://earth.google.com/");
+}
+
+.Investgaccion {
+    color: chocolate;
+    background-color: crimson;
+    src: url(https://radiant-meadow-84394.herokuapp.com/sidenav);
+}
